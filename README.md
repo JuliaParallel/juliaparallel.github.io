@@ -1,1 +1,1 @@
-# juliaparallel.github.io
+# https://juliaparallel.org
