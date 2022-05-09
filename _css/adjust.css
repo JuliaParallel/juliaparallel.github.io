@@ -64,7 +64,7 @@ h5 a:visited { color: #81353c !important; }
 .jp-logo {
     background-image: url("/assets/logo.png");
     padding-right:10px;
-    width:5%;
+    width:6%;
 }
 
 .news-container{
@@ -85,12 +85,11 @@ h5 a:visited { color: #81353c !important; }
     font-size:12px;
 }
 
-
 .news-block a{
     color:#e54252;
     font-family: nyt-cheltenham,georgia,'times new roman',times,serif;
     font-size: 18px;
-    line-height: 1.em;
+    line-height: 0.5em;
 }
 
 .news-block p{

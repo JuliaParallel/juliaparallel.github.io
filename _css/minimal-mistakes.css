@@ -1867,7 +1867,7 @@ th {
 }
 
 .masthead {
-  background: transparent url("/assets/banner.png") fixed no-repeat center top;
+  background: transparent url("/assets/banner.png") fixed repeat center top;
   height: 60px;
   position: relative;
   border-bottom: 1px solid #f2f3f3;
