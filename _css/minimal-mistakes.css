@@ -1867,6 +1867,8 @@ th {
 }
 
 .masthead {
+  background: transparent url("/assets/banner.png") fixed no-repeat center top;
+  height: 60px;
   position: relative;
   border-bottom: 1px solid #f2f3f3;
   -webkit-animation: intro 0.3s both;
@@ -1881,6 +1883,7 @@ th {
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
+  padding-top: 5px;
   max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2141,18 +2144,19 @@ th {
   -ms-flex-align: center;
   align-items: center;
   min-height: 2em;
-  background: #fff;
+  /*background: #fff;*/
 }
 
 .greedy-nav a {
   display: block;
   margin: 0 1rem;
-  color: #6f777d;
+  /*color: #6f777d;*/
+  color: #fff;
   text-decoration: none;
 }
 
 .greedy-nav a:hover {
-  color: #53595e;
+  color:  #fff; /*#53595e;*/
 }
 
 .greedy-nav a.site-logo {
@@ -2203,7 +2207,7 @@ th {
   left: 0;
   bottom: 0;
   height: 4px;
-  background: #6f777d;
+  background: #e54252;
   width: 100%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -2523,6 +2527,7 @@ th {
 }
 
 .page__footer {
+  background-image: url("/assets/footer.png");
   clear: both;
   float: left;
   margin-left: 0;
@@ -2532,8 +2537,9 @@ th {
   position: absolute;
   bottom: 0;
   height: auto;
-  margin-top: 3em;
-  color: #898c8f;
+  margin-top: 0px; /* 3em; */
+  /*color: #898c8f;*/
+  color: #fff;
   -webkit-animation: intro 0.3s both;
   animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
@@ -2551,7 +2557,7 @@ th {
   clear: both;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2em;
+  margin-top: 1em;
   max-width: 100%;
   padding: 0 1em 2em;
 }
@@ -3559,7 +3565,7 @@ a.reversefootnote:hover {
 
 @media (min-width: 80em) {
   #main {
-    max-width: 1280px;
+    /*max-width: 1280px;*/
   }
 }
 
