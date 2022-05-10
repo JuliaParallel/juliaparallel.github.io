@@ -40,7 +40,7 @@ function hfun_news()
     write(io, """<div class="news-container">""")
     for year in curyear:-1:2022
         ys = "$year"
-        year < curyear && write(io, "\n**$year**\n")
+        year < curyear
         for month in 12:-1:1
             ms = "0"^(month < 10) * "$month"
             base = joinpath("news", ys, ms)
@@ -54,7 +54,8 @@ function hfun_news()
                 surl = strip(url, '/')
                 title = pagevar(surl, :title)
                 short_descr = pagevar(surl, :short_descr)
-                author = pagevar(surl, :author)
+                post_author = pagevar(surl, :post_author)
+
                 width = rand(250:290)
                 pubdate = pagevar(surl, :published)
                 if isnothing(pubdate)
@@ -68,8 +69,8 @@ function hfun_news()
                 lines[i] *= """<div class="news-block" style="width:$(width)px;margin:-5px;">"""
                 lines[i] *= """<a href="$url">$title</a> $date<br>"""
                 lines[i] *= """<p>$short_descr</p>"""
-                lines[i] *= """$author"""
-                for b in author_badges[author]
+                lines[i] *= """$post_author"""
+                for b in author_badges[post_author]
                       lines[i] *= """<img src="/assets/$b.png"/>"""
                 end
                 lines[i] *= """</div>"""
