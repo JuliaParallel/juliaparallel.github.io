@@ -2242,10 +2242,12 @@ th {
   margin: 0;
   padding: 10px 20px;
   font-size: 1em;
+  color: #e54252;
 }
 
 .greedy-nav .hidden-links a:hover {
-  color: #53595e;
+  /*color: #53595e;*/
+  color: #e54252;
   background: #dbdddf;
 }
 

@@ -1,3 +1,4 @@
+
 function hfun_bar(vname)
   val = Meta.parse(vname[1])
   return round(sqrt(val), digits=2)
@@ -52,10 +53,9 @@ function hfun_news()
                 ps  = splitext(post)[1]
                 url = "/news/$ys/$ms/$ps/"
                 surl = strip(url, '/')
-                title = pagevar(surl, :title)
+                post_title = pagevar(surl, :post_title)
                 short_descr = pagevar(surl, :short_descr)
                 post_author = pagevar(surl, :post_author)
-
                 width = rand(250:290)
                 pubdate = pagevar(surl, :published)
                 if isnothing(pubdate)
@@ -67,7 +67,7 @@ function hfun_news()
                 end
                 lines[i] = """"""
                 lines[i] *= """<div class="news-block" style="width:$(width)px;margin:-5px;">"""
-                lines[i] *= """<a href="$url">$title</a> $date<br>"""
+                lines[i] *= """<a href="$url">$post_title</a> $date<br>"""
                 lines[i] *= """<p>$short_descr</p>"""
                 lines[i] *= """$post_author"""
                 for b in author_badges[post_author]
