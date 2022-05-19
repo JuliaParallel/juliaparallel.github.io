@@ -16,6 +16,16 @@ generate_rss = true
 website_title = "JuliaParallel"
 website_descr = "JuliaParallel"
 website_url   = "https://juliaparallel.org/"
+
+# Author badges
+using DelimitedFiles
+author_badges_mat = readdlm("_assets/author-badges.dat", ':')
+author_badges = Dict()
+for i = 1:size(author_badges_mat,1)
+   author_badges[author_badges_mat[i]] =
+    rstrip.(lstrip.(split(author_badges_mat[i,2], ",")))
+end
+
 +++
 
 <!--
