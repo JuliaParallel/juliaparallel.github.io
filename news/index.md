@@ -1,3 +1,5 @@
+@def title = "News"
+
 {{news}}
 
 
