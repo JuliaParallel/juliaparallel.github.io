@@ -1,8 +1,11 @@
-@def title = "Comments on the Julius Graph Engine Benchmark"
-@def hascode = true
-@def date = Date(2022, 05, 29)
-@def rss = "Comments on the Julius Graph Engine Benchmark"
-@def tags = ["dagger", "benchmarks", "news"]
++++
+using Date
+title = "Comments on the Julius Graph Engine Benchmark"
+hascode = true
+date = Date(2022, 05, 29)
+rss = "Comments on the Julius Graph Engine Benchmark"
+tags = ["dagger", "benchmarks", "news"]
++++
 
 # Comments on the Julius Graph Engine Benchmark
 \toc
