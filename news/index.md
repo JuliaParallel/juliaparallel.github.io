@@ -1,6 +1,6 @@
-@def title = "News"
++++
+title = "News"
++++
 
 {{news}}
-
-
 

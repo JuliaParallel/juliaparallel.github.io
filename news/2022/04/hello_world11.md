@@ -8,7 +8,6 @@ date = Date(2022, 04, 04)
 rss = "Hello world"
 tags = ["hpc", "internals", "news"]
 +++
-
 # Lorem ipsum dolor sit amet
 \toc
 
