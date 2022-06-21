@@ -16,7 +16,7 @@ jobs:
           # NOTE: this is the Xranklin branch the site is built with
           BRANCH: "dev"
           # NOTE: this is the base URL prefix (landing page at /$BASE_URL_PREFIX/)
-          BASE_URL_PREFIX: "juliaparallel-xr"
+          BASE_URL_PREFIX: ""
 
           # ===================================================================
           # DON'T CHANGE THE FOLLOWING UNLESS YOU HAVE GOOD REASONS TO
