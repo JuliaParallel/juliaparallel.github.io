@@ -2,7 +2,7 @@
 using Dates
 post_title = "Comments on the Julius Graph Engine Benchmark"
 short_descr = "Spurred by a performance benchmark published by Julius Technologies, we lead you through how Dagger's scheduler was optimized to perform more competitively on the benchmark."
-post_author = "Julian Samaroo"
+post_author = "Philip1"
 hascode = true
 date = Date(2022, 07, 01)
 rss = "Comments on the Julius Graph Engine Benchmark"
