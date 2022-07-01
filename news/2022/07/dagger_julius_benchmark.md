@@ -96,7 +96,7 @@ Let's start with the most eggregious offender first: `Base.summarysize()`. This 
 
 So, what can we do about this? The specific case where this was occuring is in `add_thunk!`, which is where new tasks are generated and added to the scheduler. Here, thankfully, `MemPool.poolset` is being called on a small-ish task object for GC purposes; however, the size will not be used, because task objects can't be serialized over the network or to disk (the only two cases where size is used). To completely eliminate calls to `Base.summarysize()` when we don't want it called, we can just manually specify a size for the object being passed to `MemPool.poolset`, avoiding the `Base.summarysize()` call entirely. Therefore, we can safely pass any arbitrary size value to disable the automatic `Base.summarysize()` call.  With [that change](https://github.com/JuliaParallel/Dagger.jl/commit/2f47217c29e4ac9b2f0921df7bc18bdfe4356e2b), how do we fare?
 
-| # of Iterations | Dagger JIT on `s_n` | Dagger JIT on `y_n |
+| # of Iterations | Dagger JIT on `s_n` | Dagger JIT on `y_n` |
 | :-- | :--: | :--: |
 | 1000 | 0.899850 | 0.947113 |
 | 5000 | 16.065269 | 13.962618 |
@@ -108,7 +108,7 @@ Ok, that's much better! At 10000 depth, we shaved off about 50% from each benchm
 
 The next improvement came from how task dependencies are resolved. The `add_thunk!` function calls `reschedule_inputs!` to ensure that all "upstream" dependencies of a given task are satisfied before getting the task ready to be scheduled. While this function was recently optimized due to reported scaling issues, it's still far too slow, mostly because it recursively walks up the dependency chain until it finds that all upstream tasks are actively executing or finished executing. That's pretty silly; while not everything upstream is executing, that doesn't mean we need to keep walking through those tasks everytime we add a new task further down the DAG. What I chose to do was add a memoization dictionary to the scheduler that, when a task has been through `reschedule_inputs!` or an equivalent code path, holds an entry to that task to mark that it's not necessary to traverse it again. This was a [reasonably simple improvement](https://github.com/JuliaParallel/Dagger.jl/commit/c17b86d13423351617c7a68ff2d5dafd27d7d32a), trading a bit of memory for massively decreased execution overhead, leading us to these results:
 
-| # of Iterations | Dagger JIT on `s_n` | Dagger JIT on `y_n |
+| # of Iterations | Dagger JIT on `s_n` | Dagger JIT on `y_n` |
 | :-- | :--: | :--: |
 | 1000 | 0.452218 | 0.577350 |
 | 5000 | 5.234815 | 4.086071 |
@@ -120,7 +120,7 @@ Nice, we just cut out 72% of the `s_n` runtime and 78% of the `y_n` runtime. We'
 
 Still looking at the same region of code, we find that we're spending a lot of runtime in validating that our graph is actually acyclic. More specifically, the `register_future!` function is called from `add_thunk!` to register a `Distributed.Future` that will be filled with the result of the newly-created task once it's done executing, allowing the user to wait on and fetch the task result. This function needs to be somewhat defensive, though, when being called from one task targetting another. If a task tries to register and wait on a future for some other task that is downstream of itself, it will wait forever, because that downstream task won't execute until the task waiting on it completes (thus, a deadlock occurs). Similarly, a task shouldn't be able to wait on itself. To avoid this, `register_future!` checks whether the calling task "dominates" the targetted task; when a task A dominates a task B, that means that the completion of A is necessary before the execution and completion of B can occur. If the calling task dominates the target task, then an error is thrown, preventing accidental deadlock. This check is well-intended, but is also slow; thankfully, when adding tasks with `add_thunk!`, we generally can assume that this new task isn't going to be waited on by a downstream task (it's possible, but a careful developer can trivially avoid it; we shouldn't burden them with unnecessary checks). To alleviate this, I simply added a kwarg to `register_future!` that will by default do the domination check, but can allow it to be manually disabled. For `@spawn`, which implicitly calls `add_thunk!`, we disable the check, because in common usage of that API it's not easy to cause deadlocks[^2]. [This change](https://github.com/JuliaParallel/Dagger.jl/commit/d543c23815de79ae39616045aa1ee285665c014c) gives us the following excellent results:
 
-| # of Iterations | Dagger JIT on `s_n` | Dagger JIT on `y_n |
+| # of Iterations | Dagger JIT on `s_n` | Dagger JIT on `y_n` |
 | :-- | :--: | :--: |
 | 1000 | 0.201789 | 0.223203 |
 | 5000 | 1.216356 | 1.173638 |
