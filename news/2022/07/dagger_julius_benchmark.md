@@ -186,7 +186,13 @@ In the process of writing this post, I think I made it reasonably clear that gra
 
 ### Contact Information
 
+~~~
+<img src="/assets/authors/julian-samaroo.png" alt="Julian Samaroo"  style="float: left; width:70px; padding: 0px 10px 0px 0px"/>
+~~~
 I'm `@jpsamaroo` on Slack, Zulip, or Discourse, and my email is jpsamaroo -AT- gmail -DOT- com. On Slack, Dagger questions are well-suited for the `#helpdesk`, `#multithreading` and `#distributed` channels.
+
+\\
+\\
 
 [^1]: `Profile.@profile myfunc(...)` runs `myfunc(...)` as usual, but also runs a background statistical profiler while the code is executing. This profiler will stochastically sample stacktraces from the running function, which can later by collected and processed by `Profile.print()`. The result of `Profile.print()` is essentially a view of all collected stacktraces overlayed on top of each other; this gives you a full view of *what* was happening at some point during `myfunc`'s execution. It also shows a counter next to each stackframe (approximately each function call), which shows you *how often* a given code location was hit. Combined with the count of the total number of stacktraces collected (shown at the bottom), it's possible to get an idea of what percentage of `myfunc`'s execution time was caused by each of its components, no matter how far down in the call stack you look.
 
