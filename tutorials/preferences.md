@@ -1,5 +1,6 @@
-@def title = "Preferences"
-@def hascode = true
++++
+title = "Preferences"
++++
 
 # Preferences
 

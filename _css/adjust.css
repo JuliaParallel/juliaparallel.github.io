@@ -62,7 +62,7 @@ h5 a:visited { color: #81353c !important; }
 
 
 .jp-logo {
-    background-image: url("/assets/logo.png");
+    background-image: url('../assets/logo.png');
     padding-right:10px;
     width:6%;
 }

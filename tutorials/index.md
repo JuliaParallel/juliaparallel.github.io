@@ -1,4 +1,6 @@
-@def title = "Tutorials"
++++
+title = "Tutorials"
++++
 
 # Tutorials
 
