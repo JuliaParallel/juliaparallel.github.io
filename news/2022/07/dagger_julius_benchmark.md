@@ -1,8 +1,13 @@
-@def title = "Comments on the Julius Graph Engine Benchmark"
-@def hascode = true
-@def date = Date(2022, 07, 01)
-@def rss = "Comments on the Julius Graph Engine Benchmark"
-@def tags = ["dagger", "benchmarks", "news"]
++++
+using Dates
+post_title = "Comments on the Julius Graph Engine Benchmark"
+short_descr = "Spurred by a performance benchmark published by Julius Technologies, we lead you through how Dagger's scheduler was optimized to perform more competitively on the benchmark."
+post_author = "Julian Samaroo"
+hascode = true
+date = Date(2022, 07, 01)
+rss = "Comments on the Julius Graph Engine Benchmark"
+tags = ["dagger", "benchmarks", "news"]
++++
 
 # Comments on the Julius Graph Engine Benchmark
 \toc
