@@ -2,7 +2,7 @@
 using Dates
 post_title = "Comments on the Julius Graph Engine Benchmark"
 short_descr = "Spurred by a performance benchmark published by Julius Technologies, we lead you through how Dagger's scheduler was optimized to perform more competitively on the benchmark."
-post_author = "Philip1"
+post_author = "Julian Samaroo"
 hascode = true
 date = Date(2022, 07, 01)
 rss = "Comments on the Julius Graph Engine Benchmark"
@@ -14,8 +14,15 @@ tags = ["dagger", "benchmarks", "news"]
 
 ### Introduction
 
-![Shipping goods over the sea via ocean freighter](https://thumbnails.production.thenounproject.com/GZSNSq5eKQqKDoHfKGOFmb5QT4s=/fit-in/1000x1000/photos.production.thenounproject.com/photos/6D93E0C1-DFF3-410B-8086-214D12A2D362.jpg)
-##### Public domain image courtesy of https://thenounproject.com/carolhighsmith/
+\\
+
+!["Shipping goods over the sea via ocean freighter."](https://thumbnails.production.thenounproject.com/GZSNSq5eKQqKDoHfKGOFmb5QT4s=/fit-in/1000x1000/photos.production.thenounproject.com/photos/6D93E0C1-DFF3-410B-8086-214D12A2D362.jpg)
+~~~
+<p style="text-align: center;">
+Public domain image courtesy of <a href="https://thenounproject.com/carolhighsmith/">carolhighsmith</a>
+</p>
+~~~
+
 
 Scheduling is a hard problem, but it's a necessary evil for modern civilization:
 
