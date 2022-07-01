@@ -2459,6 +2459,7 @@ th {
 
 .toc {
   font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-size: 16px;
   color: #7a8288;
   background-color: #fff;
   border: 1px solid #f2f3f3;

@@ -186,6 +186,10 @@ td {
   margin: 10px 0;
 }
 
+.franklin-content ul li {
+  font-size:16px;
+}
+
 .franklin-content a {
   color: #004de6;
   text-decoration: none;
