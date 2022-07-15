@@ -62,8 +62,8 @@ From what I understand, the JGE requires visibility into the whole DAG before ex
 
 | Feature | Dask | Ray | Dagger.jl | JGE | TensorFlow | Cilk | Vanilla Julia |
 | :-- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| AOT (static) | :heavy_check_mark: | :heavy_check_mark: (Actors) | :heavy_check_mark: (`delayed`) | :heavy_check_mark: | :heavy_check_mark: (TF 1.x) | :x: | :x: |
-| JIT (dynamic) | :x: | :heavy_check_mark: (Tasks) | :heavy_check_mark: (`@spawn`) | :x: | :heavy_check_mark: (TF 2.x) | :heavy_check_mark: | :heavy_check_mark: |
+| AOT (static) | :x: | :heavy_check_mark: (Actors) | :heavy_check_mark: (`delayed`) | :heavy_check_mark: | :heavy_check_mark: (TF 1.x) | :x: | :x: |
+| JIT (dynamic) | :heavy_check_mark: | :heavy_check_mark: (Tasks) | :heavy_check_mark: (`@spawn`) | :x: | :heavy_check_mark: (TF 2.x) | :heavy_check_mark: | :heavy_check_mark: |
 
 There was also a minor issue with the benchmark that I noticed for Dask and Dagger that could possibly give them an unfair advantage over TF and JGE (which I've reported to Julius, who kindly updated their benchmark results). Specifically, the benchmarking script doesn’t wait on the launched computations to complete. This is a simple matter of calling `f2.compute()` and `fetch(f2)` for Dask and Dagger respectively, to force the execution of the full graph and the retrieval of the final result.
 
