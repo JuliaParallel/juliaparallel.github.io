@@ -54,35 +54,35 @@ Workshops about performance engineering, GPU programming and general use of Juli
 
 Some of the papers using Julia in HPC, including the JuliaParallel software stack:
 
-* V. Churavy, W. F Godoy, C. Bauer, H. Ranocha, M. Schlottke-Lakemper, L. Räss,
-J. Blaschke, M. Giordano, E. Schnetter, S. Omlin, J. S. Vetter, and A. Edelman, _[Bridging HPC Communities through the Julia Programming Language](https://arxiv.org/abs/2211.02740)_, 2022, arXiv:2211.02740.
+* V. Churavy, W. F Godoy, C. Bauer, H. Ranocha, M. Schlottke-Lakemper, L. Räss, J. Blaschke,
+  M. Giordano, E. Schnetter, S. Omlin, J. S. Vetter, and A. Edelman, _[Bridging HPC
+  Communities through the Julia Programming Language](https://arxiv.org/abs/2211.02740)_,
+  2022, arXiv:2211.02740.
 * M. Giordano, M. Klöwer and V. Churavy, _[Productivity meets Performance: Julia on
-  A64FX](https://ieeexplore.ieee.org/document/9912702)_, 2022 IEEE International Conference
+  A64FX](https://doi.org/10.1109/CLUSTER51413.2022.00072)_, 2022 IEEE International Conference
   on Cluster Computing (CLUSTER), 2022, pp. 549-555,
-  [doi:10.1109/CLUSTER51413.2022.00072](https://doi.org/10.1109/CLUSTER51413.2022.00072)
   (pre-print: [arXiv:2207.12762](https://arxiv.org/abs/2207.12762)).
 * H. Shang et al., (2022). _[Large-Scale Simulation of Quantum Computational Chemistry on a
   New Sunway Supercomputer](https://arxiv.org/abs/2207.03711)_. arXiv:2207.03711.
 * W. C. Lin and S. McIntosh-Smith, _[Comparing Julia to Performance Portable Parallel
-  Programming Models for HPC](https://ieeexplore.ieee.org/document/9652798)_, 2021
+  Programming Models for HPC](https://doi.org/10.1109/PMBS54543.2021.00016)_, 2021
   International Workshop on Performance Modeling, Benchmarking and Simulation of High
-  Performance Computer Systems (PMBS), 2021, pp. 94-105,
-  [doi:10.1109/PMBS54543.2021.00016](https://doi.org/10.1109/PMBS54543.2021.00016).
+  Performance Computer Systems (PMBS), 2021, pp. 94-105.
 * A. Rizvi, K. C. Hale, (2021). _[A Look at Communication-Intensive Performance in
   Julia](https://arxiv.org/abs/2109.14072)_. arXiv:2109.14072.
 * S. Byrne, L. C. Wilcox and V. Churavy, (2021). _[MPI.jl: Julia bindings for the Message
-  Passing Interface](https://proceedings.juliacon.org/papers/10.21105/jcon.00068)_. JuliaCon
-  Proceedings, 1(1), 68, [doi:10.21105/jcon.00068](https://doi.org/10.21105/jcon.00068).
-* C. Bauer, Y. Schattner, S. Trebst, and E Berg, _[Hierarchy of energy scales in an O(3) symmetric antiferromagnetic quantum critical metal: a Monte Carlo study](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.023008)_, 2020, Phys. Rev. Research 2, 023008.
+  Passing Interface](https://doi.org/10.21105/jcon.00068)_. JuliaCon Proceedings, 1(1), 68.
+* C. Bauer, Y. Schattner, S. Trebst, and E Berg, _[Hierarchy of energy scales in an O(3)
+  symmetric antiferromagnetic quantum critical metal: a Monte Carlo
+  study](https://doi.org/10.1103/PhysRevResearch.2.023008)_, 2020, Phys. Rev. Research 2,
+  023008.
 * S. Hunold and S. Steiner, _[Benchmarking Julia’s Communication Performance: Is Julia HPC
-  ready or Full HPC?](https://ieeexplore.ieee.org/document/9307882)_, 2020 IEEE/ACM
+  ready or Full HPC?](https://doi.org/10.1109/PMBS51919.2020.00008)_, 2020 IEEE/ACM
   Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems
-  (PMBS), 2020, pp. 20-25,
-  [doi:10.1109/PMBS51919.2020.00008](https://doi.org/10.1109/PMBS51919.2020.00008).
+  (PMBS), 2020, pp. 20-25.
 * J. Regier et al., _[Cataloging the visible universe through Bayesian inference in Julia at
-  petascale](https://www.sciencedirect.com/science/article/pii/S0743731518304672)_, Journal
-  of Parallel and Distributed Computing, Volume 127, 2019, Pages 89-104,
-  [doi:10.1016/j.jpdc.2018.12.008](https://doi.org/10.1016/j.jpdc.2018.12.008) (preprint:
+  petascale](https://doi.org/10.1016/j.jpdc.2018.12.008)_, Journal of Parallel and
+  Distributed Computing, Volume 127, 2019, Pages 89-104, (preprint:
   [arXiv:1801.10277](https://arxiv.org/abs/1801.10277)).
   <!-- For some reason Xranklin seems to duplicate the character after the last `)` if it's
 	   only one, so we put something else to work around this bug. -->
