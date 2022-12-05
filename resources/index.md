@@ -14,23 +14,26 @@ Workshops about performance engineering, GPU programming and general use of Juli
 * [Julia for HPC](https://sc22.supercomputing.org/presentation/?id=bof136&sess=sess309)
   Birds of a Feather session at SuperComputing22 (SC22)
   ([material](https://github.com/JuliaParallel/julia-hpc-bof-sc22)), by William F. Godoy,
-  Valentin Churavy, Johannes Blaschke, Mosè Giordano, Pedro Valero-Lara.  November 15th,
+  Valentin Churavy, Johannes Blaschke, Carsten Bauer, Mosè Giordano, Pedro Valero-Lara. November 15th,
   2022.
 * [Julia for High-Performance Computing @ HLRS](https://www.hlrs.de/training/2022/julia)
-  ([material](https://github.com/carstenbauer/JuliaHLRS22)), by Carsten Bauer, Michael
-  Schlottke-Lakemper.  September 20th-23rd, 2022.
+  ([material](https://github.com/carstenbauer/JuliaHLRS22)), by Carsten Bauer, Michael Schlottke-Lakemper. September 20th-23rd, 2022.
 * [Julia for High-Performance Computing @ JuliaCon 2022
   ](https://live.juliacon.org/talk/LUWYRJ),
   ([video](https://www.youtube.com/watch?v=fog1x9rs71Q),
   [material](https://github.com/JuliaParallel/juliacon-2022-julia-for-hpc-minisymposium)),
-  by William F Godoy, Michael Schlottke-Lakemper, Samuel Omlin, Simon Byrne, Tim Besard,
-  Julian Samaroo, Albert Reuther, Johannes Blaschke, Michael Schlottke-Lakemper, Ludovic
+  by William F Godoy, Michael Schlottke-Lakemper, Carsten Bauer, Samuel Omlin, Simon Byrne, Tim Besard,
+  Julian Samaroo, Albert Reuther, Johannes Blaschke, Ludovic
   Räss. July 26th, 2022.
 * [GPU Programming with Julia @ CSCS/ETH Zurich](https://github.com/omlins/julia-gpu-course)
   ([video recording](https://youtu.be/LmM2QmYw_NM)), by Tim Besard, Samuel Omlin. November
   2nd-5th, 2021.
-* [Advanced Workshop on Julia - Cologne 21](https://github.com/carstenbauer/JuliaCologne21),
+* [Advanced Workshop on Julia @ University of Cologne](https://github.com/carstenbauer/JuliaCologne21),
   by Carsten Bauer. March 15th-17th, 2021.
+* [Julia Workshop @ HPC.NRW](https://github.com/carstenbauer/JuliaNRW21),
+  by Carsten Bauer. March 2nd-4th, 2021. ([second edition](https://github.com/carstenbauer/JuliaNRWSS21), June 22th-24th)
+* [Julia Workshop @ University of Oulu](https://github.com/carstenbauer/JuliaOulu20),
+  by Carsten Bauer. February 11th-13th, 2020.
 * [Julia performance
   workshop](https://github.com/vchuravy/julia-performance/tree/a1c77e92033c0ef3f58a360978ac2d3b08745ba8),
   by Valentin Churavy.  November, 2019.
@@ -41,6 +44,8 @@ Workshops about performance engineering, GPU programming and general use of Juli
   Science](https://www.youtube.com/watch?v=iCeg795IZq0), [#4 - GPU Computing in
   Julia](https://www.youtube.com/watch?v=7Yq1UyncDNc), [#5 - Multithreading in
   Julia](https://www.youtube.com/watch?v=dewQHIaATGE)), by Valentin Churavy. July, 2019.
+* [Julia Workshop @ University of Cologne](https://github.com/carstenbauer/JuliaWorkshop19),
+  by Carsten Bauer. Fall 2019.
 * [Introduction to Julia @ CSC](https://www.csc.fi/web/training/-/julia_intro_2019)
   ([material](https://github.com/csc-training/julia-introduction/)), by Joonas
   Nättilä. April 17th-19th, 2019.
@@ -86,6 +91,7 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 * [Instructions for using Julia on Fugaku](https://github.com/giordano/julia-on-fugaku/)
 * [Documentation for using Julia at
   NERSC](https://docs.nersc.gov/development/languages/julia/)
+* [Documentation for using Julia at PC2](https://uni-paderborn.atlassian.net/wiki/spaces/PC2DOK/pages/12878307/Julia)
 
 ## Community
 
@@ -93,3 +99,4 @@ Get involved with the Julia HPC community:
 
 * JuliaHPC monthly call, typically every fourth Tuesday of the month @ 2pm ET, see events in
   [Julia Community calendar](https://julialang.org/community/#events) for more details.
+* [#hpc](https://julialang.slack.com/archives/CBFP2PTTR) on the [Julia Slack](https://julialang.org/slack/)
