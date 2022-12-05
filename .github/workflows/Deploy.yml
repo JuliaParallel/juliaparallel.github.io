@@ -4,19 +4,49 @@ on:
   push:
     branches:
       - main
+  pull_request:
+
+concurrency:
+  # Skip intermediate builds: always.
+  # Cancel intermediate builds: always.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
+  preview:
+    runs-on: ubuntu-latest
+    outputs:
+      preview: ${{ steps.set-preview.outputs.preview }}
+    steps:
+      - name: Set Preview
+        id: set-preview
+        run: |
+          if [[ ${{ github.event_name }} == "pull_request" ]]; then
+              PREVIEW="previews/PR${PRNUM}"
+          else
+              PREVIEW=""
+          fi
+          echo "preview=${PREVIEW}"
+          echo "preview=${PREVIEW}" >> "${GITHUB_OUTPUT}"
+        env:
+            PRNUM: ${{ github.event.number }}
+
   deploy:
+    needs: preview
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: julia-actions/cache@v1
       - uses: tlienart/xranklin-build-action@v3.2
+        if: github.event_name != 'pull_request' || github.repository == github.event.pull_request.head.repo.full_name # if this build is NOT a PR build, OR if this build is a PR build and the PR is NOT from a fork
         with:
           # NOTE: this is the Xranklin branch the site is built with
           BRANCH: "dev"
           # NOTE: this is the base URL prefix (landing page at /$BASE_URL_PREFIX/)
           BASE_URL_PREFIX: ""
+          # Directory where to deploy the website.
+          PREVIEW: ${{ needs.preview.outputs.preview }}
 
           # ===================================================================
           # DON'T CHANGE THE FOLLOWING UNLESS YOU HAVE GOOD REASONS TO
