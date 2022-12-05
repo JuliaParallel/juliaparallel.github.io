@@ -54,6 +54,8 @@ Workshops about performance engineering, GPU programming and general use of Juli
 
 Some of the papers using Julia in HPC, including the JuliaParallel software stack:
 
+* V. Churavy, W. F Godoy, C. Bauer, H. Ranocha, M. Schlottke-Lakemper, L. Räss,
+J. Blaschke, M. Giordano, E. Schnetter, S. Omlin, J. S. Vetter, and A. Edelman, _[Bridging HPC Communities through the Julia Programming Language](https://arxiv.org/abs/2211.02740)_, 2022, arXiv:2211.02740.
 * M. Giordano, M. Klöwer and V. Churavy, _[Productivity meets Performance: Julia on
   A64FX](https://ieeexplore.ieee.org/document/9912702)_, 2022 IEEE International Conference
   on Cluster Computing (CLUSTER), 2022, pp. 549-555,
@@ -71,6 +73,7 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 * S. Byrne, L. C. Wilcox and V. Churavy, (2021). _[MPI.jl: Julia bindings for the Message
   Passing Interface](https://proceedings.juliacon.org/papers/10.21105/jcon.00068)_. JuliaCon
   Proceedings, 1(1), 68, [doi:10.21105/jcon.00068](https://doi.org/10.21105/jcon.00068).
+* C. Bauer, Y. Schattner, S. Trebst, and E Berg, _[Hierarchy of energy scales in an O(3) symmetric antiferromagnetic quantum critical metal: a Monte Carlo study](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.023008)_, 2020, Phys. Rev. Research 2, 023008.
 * S. Hunold and S. Steiner, _[Benchmarking Julia’s Communication Performance: Is Julia HPC
   ready or Full HPC?](https://ieeexplore.ieee.org/document/9307882)_, 2020 IEEE/ACM
   Performance Modeling, Benchmarking and Simulation of High Performance Computer Systems
