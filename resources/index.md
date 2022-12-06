@@ -6,6 +6,10 @@ title = "Resources"
 
 All you wanted to know about Julia in High-Performance Computing (HPC): workshops, papers,
 and how to get in touch with the community.
+If you find something to be missing, please create a PR to the
+[website repo](https://github.com/JuliaParallel/juliaparallel.github.io)
+with the relevant information to help ensure that this overview is as
+comprehensive as possible.
 
 ## Workshops
 
