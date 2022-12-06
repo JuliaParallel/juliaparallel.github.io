@@ -16,6 +16,7 @@ comprehensive as possible.
 Workshops about performance engineering, GPU programming and general use of Julia in HPC:
 
 ### 2022
+
 * [Julia for HPC](https://sc22.supercomputing.org/presentation/?id=bof136&sess=sess309)
   Birds of a Feather session at SuperComputing22 (SC22)
   ([material](https://github.com/JuliaParallel/julia-hpc-bof-sc22)), by William F. Godoy,
@@ -32,6 +33,7 @@ Workshops about performance engineering, GPU programming and general use of Juli
   Räss. July 26th, 2022.
 
 ### 2021
+
 * [GPU Programming with Julia @ CSCS/ETH Zurich](https://github.com/omlins/julia-gpu-course)
   ([video recording](https://youtu.be/LmM2QmYw_NM)), by Tim Besard, Samuel Omlin. November
   2nd-5th, 2021.
@@ -41,6 +43,7 @@ Workshops about performance engineering, GPU programming and general use of Juli
   by Carsten Bauer. March 2nd-4th, 2021. ([second edition](https://github.com/carstenbauer/JuliaNRWSS21), June 22th-24th)
 
 ### 2020 and older
+
 * [Julia Workshop @ University of Oulu](https://github.com/carstenbauer/JuliaOulu20),
   by Carsten Bauer. February 11th-13th, 2020.
 * [Julia performance
@@ -64,6 +67,7 @@ Workshops about performance engineering, GPU programming and general use of Juli
 Some of the papers using Julia in HPC, including the JuliaParallel software stack:
 
 ### 2022
+
 * V. Churavy, W. F Godoy, C. Bauer, H. Ranocha, M. Schlottke-Lakemper, L. Räss, J. Blaschke,
   M. Giordano, E. Schnetter, S. Omlin, J. S. Vetter, and A. Edelman, **Bridging HPC
   Communities through the Julia Programming Language**,
@@ -73,8 +77,11 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
   on Cluster Computing (CLUSTER), 2022, pp. 549-555,
   [doi:10.1109/CLUSTER51413.2022.00072](https://doi.org/10.1109/CLUSTER51413.2022.00072),
   [arXiv:2207.12762](https://arxiv.org/abs/2207.12762).
+  <!-- For some reason Xranklin seems to duplicate the character after the last `)` if it's
+	   only one, so we put something else to work around this bug. -->
 
 ### 2021
+
 * H. Shang et al., (2022). **Large-Scale Simulation of Quantum Computational Chemistry on a
   New Sunway Supercomputer**. [arXiv:2207.03711](https://arxiv.org/abs/2207.03711).
 * W. C. Lin and S. McIntosh-Smith, **Comparing Julia to Performance Portable Parallel
@@ -87,8 +94,11 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 * S. Byrne, L. C. Wilcox and V. Churavy, (2021). **MPI.jl: Julia bindings for the Message
   Passing Interface**. JuliaCon Proceedings, 1(1), 68,
   [doi:10.21105/jcon.00068](https://doi.org/10.21105/jcon.00068).
+  <!-- For some reason Xranklin seems to duplicate the character after the last `)` if it's
+	   only one, so we put something else to work around this bug. -->
 
 ### 2020 and older
+
 * C. Bauer, Y. Schattner, S. Trebst, and E Berg, **Hierarchy of energy scales in an O(3)
   symmetric antiferromagnetic quantum critical metal: a Monte Carlo
   study**, 2020, Phys. Rev. Research 2,
