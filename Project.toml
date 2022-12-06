@@ -3,4 +3,5 @@ authors = ["Julia Lab"]
 version = "0.1.0"
 
 [deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
 Xranklin = "558449b0-171e-4e1f-900f-d076a5ddf486"
