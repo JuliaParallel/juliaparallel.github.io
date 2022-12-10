@@ -13,40 +13,54 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  preview:
+  options:
+    name: "Set options"
     runs-on: ubuntu-latest
     outputs:
-      preview: ${{ steps.set-preview.outputs.preview }}
+      deploy:  ${{ steps.set-options.outputs.deploy }}
+      preview: ${{ steps.set-options.outputs.preview }}
     steps:
-      - name: Set Preview
-        id: set-preview
+      - name: Set options
+        id: set-options
         run: |
+          # Deploy only if the PR was opened on the same repository
+          if [[ ${{ github.repository }} == ${{ github.event.pull_request.head.repo.full_name }} ]]; then
+              DEPLOY="true"
+          else
+              DEPLOY="false"
+          fi
+          # Create previews only for pull requests
           if [[ ${{ github.event_name }} == "pull_request" ]]; then
               PREVIEW="previews/PR${PRNUM}"
           else
               PREVIEW=""
           fi
+          echo "deploy=${DEPLOY}"
+          echo "deploy=${DEPLOY}" >> "${GITHUB_OUTPUT}"
           echo "preview=${PREVIEW}"
           echo "preview=${PREVIEW}" >> "${GITHUB_OUTPUT}"
         env:
             PRNUM: ${{ github.event.number }}
 
   deploy:
-    needs: preview
+    name: "Deploy"
+    needs: options
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
       - uses: actions/checkout@v3
       - uses: julia-actions/cache@v1
-      - uses: tlienart/xranklin-build-action@v3.2
-        if: github.event_name != 'pull_request' || github.repository == github.event.pull_request.head.repo.full_name # if this build is NOT a PR build, OR if this build is a PR build and the PR is NOT from a fork
+      - uses: tlienart/xranklin-build-action@v3.8
         with:
           # NOTE: this is the Xranklin branch the site is built with
           BRANCH: "dev"
           # NOTE: this is the base URL prefix (landing page at /$BASE_URL_PREFIX/)
           BASE_URL_PREFIX: ""
+          # Whether to deploy the website or not.  Can do only for PRs opened
+          # from the same repository.
+          DEPLOY: ${{ needs.options.outputs.deploy }}
           # Directory where to deploy the website.
-          PREVIEW: ${{ needs.preview.outputs.preview }}
+          PREVIEW: ${{ needs.options.outputs.preview }}
 
           # ===================================================================
           # DON'T CHANGE THE FOLLOWING UNLESS YOU HAVE GOOD REASONS TO

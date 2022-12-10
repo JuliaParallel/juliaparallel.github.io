@@ -77,8 +77,6 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
   on Cluster Computing (CLUSTER), 2022, pp. 549-555,
   [doi:10.1109/CLUSTER51413.2022.00072](https://doi.org/10.1109/CLUSTER51413.2022.00072),
   [arXiv:2207.12762](https://arxiv.org/abs/2207.12762).
-  <!-- For some reason Xranklin seems to duplicate the character after the last `)` if it's
-	   only one, so we put something else to work around this bug. -->
 
 ### 2021
 
@@ -94,8 +92,6 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 * S. Byrne, L. C. Wilcox and V. Churavy, (2021). **MPI.jl: Julia bindings for the Message
   Passing Interface**. JuliaCon Proceedings, 1(1), 68,
   [doi:10.21105/jcon.00068](https://doi.org/10.21105/jcon.00068).
-  <!-- For some reason Xranklin seems to duplicate the character after the last `)` if it's
-	   only one, so we put something else to work around this bug. -->
 
 ### 2020 and older
 
@@ -114,8 +110,6 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
   Distributed Computing, Volume 127, 2019, Pages 89-104,
   [doi:10.1016/j.jpdc.2018.12.008](https://doi.org/10.1016/j.jpdc.2018.12.008),
   [arXiv:1801.10277](https://arxiv.org/abs/1801.10277).
-  <!-- For some reason Xranklin seems to duplicate the character after the last `)` if it's
-	   only one, so we put something else to work around this bug. -->
 
 ## Using Julia in HPC facilities
 
