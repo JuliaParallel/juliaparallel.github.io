@@ -23,15 +23,16 @@ jobs:
       - name: Set options
         id: set-options
         run: |
-          # Deploy only if the PR was opened on the same repository
-          if [[ "${{ github.repository }}" == "${{ github.event.pull_request.head.repo.full_name }}" ]]; then
-              DEPLOY="true"
-          else
-              DEPLOY="false"
-          fi
+          # By default always deploy
+          DEPLOY="true"
           # Create previews only for pull requests
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
               PREVIEW="previews/PR${PRNUM}"
+              # For pull requests, actually deploy only if the PR was opened on the same
+              # repository.
+              if [[ "${{ github.repository }}" != "${{ github.event.pull_request.head.repo.full_name }}" ]]; then
+                  DEPLOY="false"
+              fi
           else
               PREVIEW=""
           fi
@@ -43,7 +44,7 @@ jobs:
             PRNUM: ${{ github.event.number }}
 
   deploy:
-    name: "Deploy"
+    name: "Build and Deploy"
     needs: options
     runs-on: ubuntu-latest
     permissions: write-all
