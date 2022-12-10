@@ -17,6 +17,9 @@ Workshops about performance engineering, GPU programming and general use of Juli
 
 ### 2022
 
+* [Julia on A64FX @ Stony Brook University](https://github.com/giordano/julia-on-ookami/)
+  ([video](https://www.youtube.com/watch?v=kZNYFWGnixA)), by Valentin Churavy and Mosè
+  Giordano.  December 8th, 2022.
 * [Julia for HPC](https://sc22.supercomputing.org/presentation/?id=bof136&sess=sess309)
   Birds of a Feather session at SuperComputing22 (SC22)
   ([material](https://github.com/JuliaParallel/julia-hpc-bof-sc22)), by William F. Godoy,
@@ -119,6 +122,7 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 * [Documentation for using Julia at
   NERSC](https://docs.nersc.gov/development/languages/julia/)
 * [Documentation for using Julia at PC2](https://uni-paderborn.atlassian.net/wiki/spaces/PC2DOK/pages/12878307/Julia)
+* [Instructions for using Julia on Ookami](https://github.com/giordano/julia-on-ookami/)
 
 ## Community
 
