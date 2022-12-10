@@ -46,9 +46,9 @@ uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
 
 [[deps.FranklinParser]]
 deps = ["REPL"]
-git-tree-sha1 = "21720fb3fb3ee04f9c1cb29944744d5dade2baa9"
+git-tree-sha1 = "4481c8e3ff70de9665737d897a0345172d80e92e"
 uuid = "796511e7-1510-466f-ad0c-1823c64bcafa"
-version = "0.6.1"
+version = "0.6.2"
 
 [[deps.HTTP]]
 deps = ["Base64", "CodecZlib", "Dates", "IniFile", "Logging", "LoggingExtras", "MbedTLS", "NetworkOptions", "OpenSSL", "Random", "SimpleBufferStream", "Sockets", "URIs", "UUIDs"]
@@ -234,7 +234,7 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 
 [[deps.Xranklin]]
 deps = ["CRC32c", "Dates", "FranklinParser", "IOCapture", "LiveServer", "Logging", "OrderedCollections", "Pkg", "REPL", "Serialization", "TOML", "URIs"]
-git-tree-sha1 = "c670f07826b330c83893ef753ed2ad44ae801ef3"
+git-tree-sha1 = "bdb8eb5161f6dff07c997ea8713973040007fd49"
 repo-rev = "main"
 repo-url = "https://github.com/tlienart/Xranklin.jl.git"
 uuid = "558449b0-171e-4e1f-900f-d076a5ddf486"
