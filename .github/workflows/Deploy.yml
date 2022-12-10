@@ -24,13 +24,13 @@ jobs:
         id: set-options
         run: |
           # Deploy only if the PR was opened on the same repository
-          if [[ ${{ github.repository }} == ${{ github.event.pull_request.head.repo.full_name }} ]]; then
+          if [[ "${{ github.repository }}" == "${{ github.event.pull_request.head.repo.full_name }}" ]]; then
               DEPLOY="true"
           else
               DEPLOY="false"
           fi
           # Create previews only for pull requests
-          if [[ ${{ github.event_name }} == "pull_request" ]]; then
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
               PREVIEW="previews/PR${PRNUM}"
           else
               PREVIEW=""
