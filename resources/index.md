@@ -69,9 +69,16 @@ Workshops about performance engineering, GPU programming and general use of Juli
 
 Some of the papers using Julia in HPC, including the JuliaParallel software stack:
 
+### 2023
+
+* W. F. Godoy, P. Valero-Lara, T. E. Dettling, C. Trefftz, I. Jorquera, T. Sheehy, R. G. Miller,
+  M. Gonzalez-Tallada, J. S. Vetter, V. Churavy, **Evaluating performance and portability of 
+  high-level programming models: Julia, Python/Numba, and Kokkos on exascale nodes**, 2023, 
+  accepted at IEEE IPDPS 2023 [HIPS workshop](https://hips2023.github.io/), [arXiv:2303.06195](https://arxiv.org/abs/2303.06195).
+
 ### 2022
 
-* V. Churavy, W. F Godoy, C. Bauer, H. Ranocha, M. Schlottke-Lakemper, L. Räss, J. Blaschke,
+* V. Churavy, W. F. Godoy, C. Bauer, H. Ranocha, M. Schlottke-Lakemper, L. Räss, J. Blaschke,
   M. Giordano, E. Schnetter, S. Omlin, J. S. Vetter, and A. Edelman, **Bridging HPC
   Communities through the Julia Programming Language**,
   2022, [arXiv:2211.02740](https://arxiv.org/abs/2211.02740).
