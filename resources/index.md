@@ -15,6 +15,10 @@ comprehensive as possible.
 
 Workshops about performance engineering, GPU programming and general use of Julia in HPC:
 
+### 2023
+
+* [GPU HPC in Julia - multi-GPU and AD](https://github.com/PTsolvers/Galileo23-MC1-GPU) master-class @ Solid Earth in the Exascale Era conference, by Ludovic Räss, Ivan Utkin. May 23rd, 2023.
+
 ### 2022
 
 * [Julia on A64FX @ Stony Brook University](https://github.com/giordano/julia-on-ookami/)
