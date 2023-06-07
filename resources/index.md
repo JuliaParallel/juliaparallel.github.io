@@ -17,6 +17,8 @@ Workshops about performance engineering, GPU programming and general use of Juli
 
 ### 2023
 
+* ["Julia for HPC Tutorial" @ Oak Ridge Leardership Facility (OLCF)](https://www.olcf.ornl.gov/calendar/julia-for-high-performance-computing-tutorial/), [video](https://vimeo.com/830368460?share=copy) by William F Godoy,  [Gray-Scott code](https://github.com/JuliaORNL/GrayScott.jl), [material](https://juliaornl.github.io/TutorialJuliaHPC/), May 24th, 2023.
+
 * [GPU HPC in Julia - multi-GPU and AD](https://github.com/PTsolvers/Galileo23-MC1-GPU) master-class @ Solid Earth in the Exascale Era conference, by Ludovic Räss, Ivan Utkin. May 23rd, 2023.
 
 ### 2022
@@ -129,6 +131,8 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 
 * [Instructions and scripts to run Julia on
   Summit](https://github.com/JuliaLabs/julia-on-summit)
+* [Instructions and scripts to run Julia on
+  Summit, Crusher, Ascent 2023](https://github.com/JuliaORNL/GrayScott.jl/tree/main/scripts)
 * [Instructions for using Julia on Fugaku](https://github.com/giordano/julia-on-fugaku/)
 * [Documentation for using Julia at
   NERSC](https://docs.nersc.gov/development/languages/julia/)
