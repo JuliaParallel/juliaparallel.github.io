@@ -136,7 +136,7 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 * [Instructions for using Julia on Fugaku](https://github.com/giordano/julia-on-fugaku/)
 * [Documentation for using Julia at
   NERSC](https://docs.nersc.gov/development/languages/julia/)
-* [Documentation for using Julia at PC2](https://uni-paderborn.atlassian.net/wiki/spaces/PC2DOK/pages/12878307/Julia)
+* [Documentation for using Julia at PC2](https://upb-pc2.atlassian.net/wiki/spaces/PC2DOK/pages/1902093/Julia)
 * [Instructions for using Julia on Ookami](https://github.com/giordano/julia-on-ookami/)
 
 ## Community
