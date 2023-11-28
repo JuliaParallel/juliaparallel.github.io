@@ -77,10 +77,10 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 
 ### 2023
 
-* W. F. Godoy, P. Valero-Lara, T. E. Dettling, C. Trefftz, I. Jorquera, T. Sheehy, R. G. Miller,
-  M. Gonzalez-Tallada, J. S. Vetter, V. Churavy, **Evaluating performance and portability of 
-  high-level programming models: Julia, Python/Numba, and Kokkos on exascale nodes**, 2023, 
-  accepted at IEEE IPDPS 2023 [HIPS workshop](https://hips2023.github.io/), [arXiv:2303.06195](https://arxiv.org/abs/2303.06195).
+* W. F. Godoy, P. Valero-Lara, C. Anderson, K. W. Lee, A. Gainaru, R. Ferreira Da Silva, J. S. Vetter. **Julia as a unifying end-to-end workflow language on the Frontier exascale system**. Best paper at SC23 WORKS. Proceedings of the SC23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis (SC-W '23). [doi:10.1145/3624062.3624278](https://doi.org/10.1145/3624062.3624278), [arXiv:2309.10292](https://doi.org/10.48550/arXiv.2309.10292)
+
+
+* W. F. Godoy, P. Valero-Lara, T. E. Dettling, C. Trefftz, I. Jorquera, T. Sheehy, R. G. Miller, M. Gonzalez-Tallada, J. S. Vetter, V. Churavy, **Evaluating performance and portability of high-level programming models: Julia, Python/Numba, and Kokkos on exascale nodes**, 2023, IEEE IPDPS-W 2023, [doi:10.1109/IPDPSW59300.2023.00068](https://doi.org/10.1109/IPDPSW59300.2023.00068), [arXiv:2303.06195](https://arxiv.org/abs/2303.06195).
 
 ### 2022
 
