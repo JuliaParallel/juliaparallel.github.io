@@ -15,10 +15,16 @@ comprehensive as possible.
 
 Workshops about performance engineering, GPU programming and general use of Julia in HPC:
 
+### 2024
+
+* [The Second Julia for ORNL Science Workshop ](https://ornl.github.io/events/jufos2024/), by W F Godoy, P Valero-Lara, H Mankad, S E Hahn, K Teranishi, J S Vetter, R Ferreira da Silva, C Thomas. June 20th 2024.
+* [Julia for HPC @ UCL 2024](https://github-pages.arc.ucl.ac.uk/julia-hpc-2024/) workshop ([course material](https://github.com/carstenbauer/JuliaUCL24)), by Carsten Bauer, Mosè Giordano. February 13th-16th, 2024.
+
 ### 2023
 
+* [GPU Programming with Julia 2023](https://github.com/omlins/julia-gpu-course-2023) ([material](https://github.com/maleadt/cscs2023)), by Tim Besard, Samuel Omlin.  November 22nd-24th, 2023.
+* [Julia for High-Performance Computing @ HLRS](https://www.hlrs.de/training/2023/julia) ([material](https://github.com/carstenbauer/JuliaHLRS23)), by Carsten Bauer, Michael Schlottke-Lakemper. October 24th-27th, 2023.
 * ["Julia for HPC Tutorial" @ Oak Ridge Leardership Facility (OLCF)](https://www.olcf.ornl.gov/calendar/julia-for-high-performance-computing-tutorial/), [video](https://vimeo.com/830368460?share=copy) by William F Godoy,  [Gray-Scott code](https://github.com/JuliaORNL/GrayScott.jl), [material](https://juliaornl.github.io/TutorialJuliaHPC/), May 24th, 2023.
-
 * [GPU HPC in Julia - multi-GPU and AD](https://github.com/PTsolvers/Galileo23-MC1-GPU) master-class @ Solid Earth in the Exascale Era conference, by Ludovic Räss, Ivan Utkin. May 23rd, 2023.
 
 ### 2022
@@ -40,6 +46,7 @@ Workshops about performance engineering, GPU programming and general use of Juli
   by William F Godoy, Michael Schlottke-Lakemper, Carsten Bauer, Samuel Omlin, Simon Byrne, Tim Besard,
   Julian Samaroo, Albert Reuther, Johannes Blaschke, Ludovic
   Räss. July 26th, 2022.
+* [Julia for ORNL Science Workshop](https://ornl.github.io/events/jufos2022/) by W F Godoy, P Valero-Lara, P W Fackler, G R Watson, J S Vetter, D Wilkerson, T Ahearn.  July 18th 2022.
 
 ### 2021
 
@@ -78,8 +85,6 @@ Some of the papers using Julia in HPC, including the JuliaParallel software stac
 ### 2023
 
 * W. F. Godoy, P. Valero-Lara, C. Anderson, K. W. Lee, A. Gainaru, R. Ferreira Da Silva, J. S. Vetter. **Julia as a unifying end-to-end workflow language on the Frontier exascale system**. Best paper at SC23 WORKS. Proceedings of the SC23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis (SC-W '23). [doi:10.1145/3624062.3624278](https://doi.org/10.1145/3624062.3624278), [arXiv:2309.10292](https://doi.org/10.48550/arXiv.2309.10292)
-
-
 * W. F. Godoy, P. Valero-Lara, T. E. Dettling, C. Trefftz, I. Jorquera, T. Sheehy, R. G. Miller, M. Gonzalez-Tallada, J. S. Vetter, V. Churavy, **Evaluating performance and portability of high-level programming models: Julia, Python/Numba, and Kokkos on exascale nodes**, 2023, IEEE IPDPS-W 2023, [doi:10.1109/IPDPSW59300.2023.00068](https://doi.org/10.1109/IPDPSW59300.2023.00068), [arXiv:2303.06195](https://arxiv.org/abs/2303.06195).
 
 ### 2022
