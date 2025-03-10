@@ -18,7 +18,7 @@ Workshops about performance engineering, GPU programming and general use of Juli
 ### 2024
 
 * [The Julia Language for Productive High-Performance Computing Tutorial @ SC24](https://sc24.conference-program.com/presentation/?id=tut130&sess=sess433), by William Godoy, Johannes Blaschke, Rabab Alomairy, Mosè Giordano, Julian Samaroo, Pedro Valero-Lara ([tutorial material](https://github.com/JuliaParallel/julia-hpc-tutorial-sc24)). November 17th 2024.
-* [The Second Julia for ORNL Science Workshop ](https://ornl.github.io/events/jufos2024/), by W F Godoy, P Valero-Lara, H Mankad, S E Hahn, K Teranishi, J S Vetter, R Ferreira da Silva, C Thomas. June 20th 2024.
+* [The Second Julia for ORNL Science Workshop](https://ornl.github.io/events/jufos2024/), by W F Godoy, P Valero-Lara, H Mankad, S E Hahn, K Teranishi, J S Vetter, R Ferreira da Silva, C Thomas. June 20th 2024.
 * [Julia for HPC @ UCL 2024](https://github-pages.arc.ucl.ac.uk/julia-hpc-2024/) workshop ([course material](https://github.com/carstenbauer/JuliaUCL24)), by Carsten Bauer, Mosè Giordano. February 13th-16th, 2024.
 
 ### 2023
@@ -82,6 +82,13 @@ Workshops about performance engineering, GPU programming and general use of Juli
 ## Papers
 
 Some of the papers using Julia in HPC, including the JuliaParallel software stack:
+
+### 2024
+
+* P. Valero-Lara, W.F. Godoy, H. Mankad, K. Teranishi, J.S. Vetter, J. Blaschke, J. Schanen, M., 2024, November. **JACC: Leveraging HPC Meta-Programming and Performance Portability with the Just-in-Time and LLVM-based Julia Language.** In SC24-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis (pp. 1955-1966). IEEE.
+[doi:10.1109/SCW63240.2024.00245](https://doi.org/10.1109/SCW63240.2024.00245)
+
+* S.E. Hahn, P.W. Fackler, W.F. Godoy, K. Maheshwari, Z. Morgan, A.T. Savici, C.M.Hoffmann, P. Valero-Lara, J.S. Vetter, R. Ferreira Da Silva, 2024, November. **Integrating ORNL’s HPC and Neutron Facilities with a Performance-Portable CPU/GPU Ecosystem**. Best Paper at SC24 XLOOP. In SC24-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis (pp. 2107-2117). IEEE. [doi:10.1109/SCW63240.2024.00264](https://doi.org/10.1109/SCW63240.2024.00264)
 
 ### 2023
 
