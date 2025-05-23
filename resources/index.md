@@ -83,11 +83,13 @@ Workshops about performance engineering, GPU programming and general use of Juli
 
 Some of the papers using Julia in HPC, including the JuliaParallel software stack:
 
+### 2025
+* Briand L, Jourdren H, Pérache M. Julia versus C++ Kokkos for performance portable Cartesian CFD solvers on heterogeneous architectures. The International Journal of High Performance Computing Applications. 2025;0(0). [doi:10.1177/10943420251341179](https://doi.org/10.1177/10943420251341179)
+  
 ### 2024
 
 * P. Valero-Lara, W.F. Godoy, H. Mankad, K. Teranishi, J.S. Vetter, J. Blaschke, J. Schanen, M., 2024, November. **JACC: Leveraging HPC Meta-Programming and Performance Portability with the Just-in-Time and LLVM-based Julia Language.** In SC24-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis (pp. 1955-1966). IEEE.
 [doi:10.1109/SCW63240.2024.00245](https://doi.org/10.1109/SCW63240.2024.00245)
-
 * S.E. Hahn, P.W. Fackler, W.F. Godoy, K. Maheshwari, Z. Morgan, A.T. Savici, C.M.Hoffmann, P. Valero-Lara, J.S. Vetter, R. Ferreira Da Silva, 2024, November. **Integrating ORNL’s HPC and Neutron Facilities with a Performance-Portable CPU/GPU Ecosystem**. Best Paper at SC24 XLOOP. In SC24-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis (pp. 2107-2117). IEEE. [doi:10.1109/SCW63240.2024.00264](https://doi.org/10.1109/SCW63240.2024.00264)
 
 ### 2023
