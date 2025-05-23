@@ -15,6 +15,10 @@ comprehensive as possible.
 
 Workshops about performance engineering, GPU programming and general use of Julia in HPC:
 
+### 2025
+
+* [Performance portability and high-performance computing with Julia](https://events.hifis.net/event/1741/contributions/13973/) @ deRSE25 ([material](https://github.com/JuliaHPC/deRSE25-workshop)), by Mosè Giordano, Valentin Churavy. February 27th 2025.
+
 ### 2024
 
 * [The Julia Language for Productive High-Performance Computing Tutorial @ SC24](https://sc24.conference-program.com/presentation/?id=tut130&sess=sess433), by William Godoy, Johannes Blaschke, Rabab Alomairy, Mosè Giordano, Julian Samaroo, Pedro Valero-Lara ([tutorial material](https://github.com/JuliaParallel/julia-hpc-tutorial-sc24)). November 17th 2024.
@@ -84,7 +88,7 @@ Workshops about performance engineering, GPU programming and general use of Juli
 Some of the papers using Julia in HPC, including the JuliaParallel software stack:
 
 ### 2025
-* Briand L, Jourdren H, Pérache M. Julia versus C++ Kokkos for performance portable Cartesian CFD solvers on heterogeneous architectures. The International Journal of High Performance Computing Applications. 2025;0(0). [doi:10.1177/10943420251341179](https://doi.org/10.1177/10943420251341179)
+* L. Briand, H. Jourdren, M. Pérache. **Julia versus C++ Kokkos for performance portable Cartesian CFD solvers on heterogeneous architectures**. The International Journal of High Performance Computing Applications. 2025;0(0). [doi:10.1177/10943420251341179](https://doi.org/10.1177/10943420251341179)
   
 ### 2024
 
