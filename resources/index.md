@@ -11,9 +11,9 @@ If you find something to be missing, please create a PR to the
 with the relevant information to help ensure that this overview is as
 comprehensive as possible.
 
-## Workshops
+## Workshops and Talks
 
-Workshops about performance engineering, GPU programming and general use of Julia in HPC:
+Workshops and presentations about performance engineering, GPU programming and general use of Julia in HPC:
 
 ### 2025
 
@@ -22,6 +22,7 @@ Workshops about performance engineering, GPU programming and general use of Juli
 ### 2024
 
 * [The Julia Language for Productive High-Performance Computing Tutorial @ SC24](https://sc24.conference-program.com/presentation/?id=tut130&sess=sess433), by William Godoy, Johannes Blaschke, Rabab Alomairy, Mosè Giordano, Julian Samaroo, Pedro Valero-Lara ([tutorial material](https://github.com/JuliaParallel/julia-hpc-tutorial-sc24)). November 17th 2024.
+* [Julia and MPI: O ABI, ABI, wherefore art thou ABI?](https://www.youtube.com/watch?v=Tj-QDvaYyMo) @ [EuroMPI/Australia 2024](https://events.vsc.ac.at/event/123/) ([slides](https://events.vsc.ac.at/event/123/attachments/72/328/EuroMPI%202024%20-%20Julia%20and%20MPI_%20O%20ABI,%20ABI,%20wherefore%20art%20thou%20ABI%3F.pdf)), by Valentin Churavy. September 25th 2024.
 * [The Second Julia for ORNL Science Workshop](https://ornl.github.io/events/jufos2024/), by W F Godoy, P Valero-Lara, H Mankad, S E Hahn, K Teranishi, J S Vetter, R Ferreira da Silva, C Thomas. June 20th 2024.
 * [Julia for HPC @ UCL 2024](https://github-pages.arc.ucl.ac.uk/julia-hpc-2024/) workshop ([course material](https://github.com/carstenbauer/JuliaUCL24)), by Carsten Bauer, Mosè Giordano. February 13th-16th, 2024.
 
