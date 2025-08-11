@@ -1,0 +1,186 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <script defer data-domain="juliaparallel.org" src="https://plausible.io/js/plausible.js"></script>
+  <link rel="stylesheet" href="/css/franklin.css">
+<link rel="stylesheet" href="/css/minimal-mistakes.css">
+<link rel="stylesheet" href="/css/adjust.css">
+<link rel="icon" href="/assets/favicon.png">
+
+
+   <title>Preferences</title>  
+  
+  
+</head>
+<body class="layout--single">
+  <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <img class="jp-logo" src="/assets/logo.png"/>
+        <a class="site-title" href="/">JuliaParallel</a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item"><a href="/news/">News</a></li>
+          <li class="masthead__menu-item"><a href="/resources/">Resources</a></li>
+          <li class="masthead__menu-item"><a href="/tutorials/">Tutorials</a></li>
+          <li class="masthead__menu-item"><a href="https://github.com/JuliaParallel">Github</a></li>
+        </ul>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <div class="initial-content">
+    <div id="main" role="main">
+
+
+
+<div class="franklin-content" >
+  <h1 id="preferences" ><a href="#preferences"> Preferences</a></h1><p>Since Julia 1.6 <a href="https://github.com/JuliaPackaging/Preferences.jl"><code>Preferences.jl</code></a>
+allows packages to declare options/preferences that the user can set on a per project
+level.</p>
+<p>Preferences are read and written from Julia with the Preferences.jl package.</p>
+<pre><code class="julia">module MyPackage
+
+using Preferences
+
+const favorite_icecream = @load_preference(&quot;icecream&quot;, &quot;vanilla&quot;)
+
+function change_mind!(flavor)
+    @set_preferences!(&quot;icecream&quot;=&gt;flavor)
+end
+
+end</code></pre>
+<p>When a preference is set it is stored in a file called <code>LocalPreferences.toml</code>
+next to your current <code>Project.toml</code>.</p>
+<h4 id="localpreferences.toml" ><a href="#localpreferences.toml"> LocalPreferences.toml</a></h4><pre><code class="toml">[MyPackage]
+icecream = &quot;chocolate&quot;</code></pre>
+<p>Note how the <code>LocalPreferences.toml</code> is scoped by package name, and thus each
+package has it's own namespace.</p>
+<h2 id="setting_preferences_of_dependencies" ><a href="#setting_preferences_of_dependencies"> Setting preferences of dependencies</a></h2><p>A common use-case of preferences is to configure the library path of libraries
+provided through <code>_jll</code> packages.</p>
+<p>As an example let's add <code>UCX.jl</code> as a dependency to a package.</p>
+<pre><code class="sh">&gt; cat Project.toml
+[deps]
+Preferences = &quot;21216c6a-2e73-6563-6e65-726566657250&quot;
+UCX = &quot;6b349878-927d-5bd5-ab28-bc3aa4175a33&quot;</code></pre>
+<p>and we can see that it currently uses the <code>libucp.so</code> from <code>UCX_jll</code>.</p>
+<pre><code class="julia-repl">julia&gt; using UCX
+julia&gt; UCX.API.libucp
+/home/vchuravy/.julia/artifacts/33301dce3561b1e57216ae5a4fc16d847e066a1d/lib/libucp.so</code></pre>
+<p>Now if I want to change the library used we have two options. Firstly the manual
+one where we directly manipulate the <code>LocalPreferences.toml</code>, and secondly using
+Prefrences <code>set_preference(UCX.UCX_jll, &quot;libucp_path&quot;=&gt;&quot;...&quot;)</code>.</p>
+<h3 id="manual_approach" ><a href="#manual_approach"> Manual approach</a></h3><p>The <code>LocalPreferences.toml</code> we create next to our <code>Project.toml</code> will look like:</p>
+<pre><code class="sh">&gt; cat LocalPreferences.toml
+[UCX_jll]
+libucp_path=&quot;/home/vchuravy/builds/ucx/lib/libucp.so&quot;</code></pre>
+<p>Running the same commands as before:</p>
+<pre><code class="julia-repl">julia&gt; using UCX
+julia&gt; UCX.API.libucp
+/home/vchuravy/.julia/artifacts/33301dce3561b1e57216ae5a4fc16d847e066a1d/lib/libucp.so</code></pre>
+<p>We see that nothing has changed. Why? Julia internally referers to packages by UUIDs
+so if you take another look at the <code>Project.toml</code> you can see that in <code>[deps]</code> we
+declare a mapping from name to UUID, and the <code>LocalPreferences.toml</code> needs exactly
+this mapping to know what package owns the namespace. We could add <code>UCX_jll</code> to our
+<code>[deps]</code> section in our package but that would unecessarily polute our dependency set.
+Instead the right solution is to add <code>UCX_jll</code> to the <code>[extras]</code> section.</p>
+<pre><code class="sh">&gt; cat Project.toml
+[deps]
+Preferences = &quot;21216c6a-2e73-6563-6e65-726566657250&quot;
+UCX = &quot;6b349878-927d-5bd5-ab28-bc3aa4175a33&quot;
+
+[extras]
+UCX_jll = &quot;16e4e860-d6b8-5056-a518-93e88b6392ae&quot;</code></pre>
+<p>Loading UCX now delightfully fails since of course we haven't done the work of placing
+a library in that location.</p>
+<pre><code class="julia-repl">julia&gt; using UCX
+ERROR: InitError: could not load library &quot;/home/vchuravy/builds/ucx/lib/libucp.so&quot;
+/home/vchuravy/builds/ucx/lib/libucp.so: cannot open shared object file: No such file or directory</code></pre>
+<p>Keep this in mind if you are ever wondering why settings in <code>LocalPreferences.toml</code>
+don't seem to take effect.</p>
+<h3 id="the_"proper"_way" ><a href="#the_"proper"_way"> The "proper" way</a></h3><p>Let's reset our environment to the state it was before:</p>
+<pre><code class="sh">&gt; cat Project.toml
+[deps]
+Preferences = &quot;21216c6a-2e73-6563-6e65-726566657250&quot;
+UCX = &quot;6b349878-927d-5bd5-ab28-bc3aa4175a33&quot;</code></pre>
+<pre><code class="julia-repl">julia&gt; using UCX
+julia&gt; @eval UCX using UCX_jll
+julia&gt; using Preferences
+julia&gt; set_preferences!(UCX.UCX_jll, &quot;libucp_path&quot; =&gt; &quot;/home/vchuravy/builds/ucx/lib/libucp.so&quot;)
+julia&gt; UCX.UCX_jll.libucp_path
+&quot;/home/vchuravy/.julia/artifacts/33301dce3561b1e57216ae5a4fc16d847e066a1d/lib/libucp.so&quot;</code></pre>
+<p>As we can see the preference has not yet taken effect, and it will require a
+restart of Julia. This is because the preference lookup is cached during package
+precompilation.</p>
+<p>Inspecting our <code>Project.toml</code> and <code>LocalPreferences.toml</code> we see that <code>Preferences.jl</code>
+automatically added <code>UCX_jll</code> to the <code>[extras]</code> section.</p>
+<pre><code class="sh">&gt; cat Project.toml
+[deps]
+Preferences = &quot;21216c6a-2e73-6563-6e65-726566657250&quot;
+UCX = &quot;6b349878-927d-5bd5-ab28-bc3aa4175a33&quot;
+
+[extras]
+UCX_jll = &quot;16e4e860-d6b8-5056-a518-93e88b6392ae&quot;</code></pre>
+<pre><code class="sh">&gt; cat example/LocalPreferences.toml
+[UCX_jll]
+libucp_path = &quot;/home/vchuravy/builds/ucx/lib/libucp.so&quot;</code></pre>
+<p>After restarting we see the expected behavior.</p>
+<pre><code class="julia-repl">julia&gt; using UCX
+ERROR: InitError: could not load library &quot;/home/vchuravy/builds/ucx/lib/libucp.so&quot;
+/home/vchuravy/builds/ucx/lib/libucp.so: cannot open shared object file: No such file or directory</code></pre>
+<h2 id="interactions_with_the_julia_load_path" ><a href="#interactions_with_the_julia_load_path"> Interactions with the <code>JULIA_LOAD_PATH</code></a></h2><p>Preferences are merged across the entire <code>JULIA_LOAD_PATH</code> to illustrate this
+let's create a new directory <code>preferences</code> and mv over our current <code>LocalPreferences.toml</code>.</p>
+<pre><code class="sh">mkdir preferences
+mv example/LocalPreferences.toml preferences/
+printf &quot;[extras]\nUCX_jll = \&quot;16e4e860-d6b8-5056-a518-93e88b6392ae\&quot;&quot; &gt; preferences/Project.toml</code></pre>
+<p>and remove <code>UCX_jll</code> from <code>Project.toml</code> in the current directory.</p>
+<pre><code class="sh">&gt; JULIA_LOAD_PATH=&quot;@:./preferences&quot; julia --project=.
+julia&gt; using UCX
+ERROR: InitError: could not load library &quot;/home/vchuravy/builds/ucx/lib/libucp.so&quot;</code></pre>
+
+  
+
+</div>
+
+
+      </div> 
+    </div>   
+
+    <div class="page__footer">
+      <footer>
+        
+        
+        <div class="page__footer-follow">
+          <ul class="social-icons">
+            <li><strong>Follow:</strong></li>
+            
+            <li><a href="https://github.com/JuliaParallel" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="page__footer-copyright">&copy; JuliaParallel. Powered by <a href="https://github.com/tlienart/Franklin.jl">Franklin</a>, <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>, and <a href="https://julia.mit.edu" rel="nofollow">Julia Lab</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/libs/minimal-mistakes/main.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+    
+    
+        <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>
