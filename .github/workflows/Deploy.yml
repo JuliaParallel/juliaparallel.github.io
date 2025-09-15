@@ -51,7 +51,7 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: julia-actions/cache@v2
-      - uses: tlienart/xranklin-build-action@e70949a36370edb99328be6141fb276265d96ea7
+      - uses: tlienart/xranklin-build-action@2aa5eb71b3219e4e5495db854f5b8ae70430638c
         with:
           # NOTE: this is the base URL prefix (landing page at /$BASE_URL_PREFIX/)
           BASE_URL_PREFIX: ""
