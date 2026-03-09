@@ -50,7 +50,14 @@ jobs:
     permissions: write-all
     steps:
       - uses: actions/checkout@v6
+      - uses: julia-actions/setup-julia@v2
+        with:
+          # Same version as the one used to resolve the manifest
+          version: '1.12.5'
       - uses: julia-actions/cache@v3
+      - name: Instantiate environment
+        run: |
+          julia --color=yes --project -e 'using Pkg; Pkg.instantiate()'
       - uses: tlienart/xranklin-build-action@e70949a36370edb99328be6141fb276265d96ea7
         with:
           # NOTE: this is the base URL prefix (landing page at /$BASE_URL_PREFIX/)
