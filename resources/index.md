@@ -18,6 +18,7 @@ Workshops and presentations about performance engineering, GPU programming and g
 ### 2025
 
 * [Performance portability and high-performance computing with Julia](https://events.hifis.net/event/1741/contributions/13973/) @ deRSE25 ([material](https://github.com/JuliaHPC/deRSE25-workshop)), by Mosè Giordano, Valentin Churavy. February 27th 2025.
+* [High Performance Computing in Julia](https://jamiemair.co.uk/courses/hpc) - Online graduate course providing an introduction to High Performance Computing (optimising serial code, parallel programming, GPU programming and cluster computing) by Jamie Mair. January 2025.
 
 ### 2024
 
